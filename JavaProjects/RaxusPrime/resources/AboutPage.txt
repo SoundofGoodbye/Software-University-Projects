@@ -1,0 +1,6 @@
+This is a tic tac toe game for two players. The player take turns to mark a 3 x 3 grid 
+with his own mark (X or O). The player who succeeds in placing three respective marks 
+in a horizontal, vertical, or diagonal row wins the game.
+
+Developers: Georgi Manov, Julieta Atanasova, Lyudmil Drenkov, Martin Atanasov.
+2014
