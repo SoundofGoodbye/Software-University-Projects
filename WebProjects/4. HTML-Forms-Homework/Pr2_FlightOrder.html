@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flight Order</title>
+    <link rel="stylesheet" type="text/css" href="pr2_style.css"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+</head>
+<body>
+<div id="wrapper">
+    <div class="left w100 flight-order">
+        <div class="holder left">
+            <h1 class="center">flight order</h1>
+
+            <div class="left left-column">
+
+                <div class="left w100">
+                    <p class="left w100 text">From</p>
+                    <select class="left w100">
+                        <option value="default">enter a city</option>
+                        <option value="SF">Sofia</option>
+                        <option value="VA">Varna</option>
+                        <option value="BUR">Burgas</option>
+                    </select>
+                </div>
+                <div class="left w100 departure">
+                    <p class="left w100 text departure">Departure Date</p>
+                    <input class="left w100" type="date" title="departure-date"/>
+                </div>
+                <div class="left w100">
+                    <p class="left w100 text">Return Date</p>
+                    <input class="left w100" type="date" title="return-date"/>
+                </div>
+                <div class="left w100">
+                    <div class="left left-column-bottom">
+                        <p class="left w100 text">12+</p>
+                        <form method="post" action="#" class="left left-column-bottom">
+                            <input type="number" class="left left-column-bottom" min="12"/>
+                        </form>
+                    </div>
+                    <div class="left left-column-bottom">
+                        <p class="left w100 text">2-12</p>
+                        <form method="post" action="#" class="left left-column-bottom">
+                            <input type="text" class="left left-column-bottom" required="required"/>
+                        </form>
+                    </div>
+                    <div class="left left-column-bottom">
+                        <p class="left w100 text">0-2</p>
+                        <form method="post" action="#" class="left left-column-bottom">
+                            <input type="text" class="left left-column-bottom" required="required"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="left right-column">
+                <p class="left w100 text">To</p>
+                <div class="left w100">
+                    <select class="left w100">
+                        <option value="default">enter a city</option>
+                        <option value="SF">Sofia</option>
+                        <option value="VA">Varna</option>
+                        <option value="BUR">Burgas</option>
+                    </select>
+
+                    <div class="left check-field">
+                        <input id="check" type="checkbox" class="left" name="check"/>
+                        <label for="check" class="left check-field">Prefer directs</label>
+                    </div>
+                </div>
+                <div class="left w100">
+                    <p class="left w100 text">Time Interval</p>
+                    <input type="time" name="time-start" class="time-interval left">
+                    <input type="time" name="time-end" class="time-interval left">
+                </div>
+                <div>
+                    <p class="left w100 text">Time Interval</p>
+                    <input type="time" name="time-start" class="time-interval left">
+                    <input type="time" name="time-end" class="time-interval left">
+                </div>
+                <div class="left w100">
+                    <p class="left w100 text">Choose class</p>
+                    <select class="left w100">
+                        <option class="left w100" value="ECO">Economy</option>
+                    </select>
+                </div>
+                <div class="left w100 search-button">
+                    <input class="left w100 search-button" type="submit" value="Search"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

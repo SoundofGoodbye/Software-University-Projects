@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+    <link rel="stylesheet" type="text/css" href="pr1_style.css"/>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="left w100 simple_form">
+            <div class="left holder">
+                <h1 class="left">Enter the system</h1>
+                <div class="left info_text">It is necessary to login in Your account in order to sign in for a course.</div>
+                <div class="left left_column">
+                    <div class="left w100 heading">are you new? <a href="#" title="register">register</a></div>
+                    <div class="left w100">
+                        <form method="post" action="#">
+                            <input type="text" class="left" name="username" value="User name" />
+                            <input type="text" class="left" name="email" value="Email" />
+                            <input type="password" class="left" name="password" value="Password"/>
+                            <input type="password" class="left" name="confirm" value="Password"/>
+                            <input type="submit" class="right pointer" name="submit" value="Register">
+                        </form>
+                    </div>
+                </div>
+                <div class="right right_column">
+                    <div class="left w100 heading">already a student? login</div>
+                    <div class="right w100">
+                        <form method="post" action="#">
+                            <input type="text" class="left" name="username" value="User name" />
+                            <input type="password" class="left" name="password" value="Password"/>
+                            <div class="left check_field">
+                                <input id="check" type="checkbox" class="left" name="check">
+                                <label for="check" class="left">Remember me?</label>
+                            </div>
+                            <div class="right login_field">
+                                <input type="submit" class="right pointer" name="login" value="Login">
+                                <a href="#" title="forgot password">Forgot Password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

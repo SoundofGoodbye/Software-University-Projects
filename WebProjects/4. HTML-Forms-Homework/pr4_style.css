@@ -1,0 +1,152 @@
+.left{float: left}
+.right{float: right}
+.w100{width: 100%}
+.center{text-align: center}
+body{font-family: Arial; margin: 0; padding: 0}
+
+.fakebook .holder
+{
+    width: 548px;
+    background: #3B5997;
+}
+.fakebook .holder .logo-text
+{
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+}
+
+.fakebook .holder .registered-trademark
+{
+    color: #ffffff;
+}
+.fakebook .holder .registration-text
+{
+    color: #ffffff;
+    font-size: 20px;
+}
+.fakebook .holder .save-text
+{
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.fakebook .holder .left-column
+{
+    width: 204px;
+    margin: 10px 12px 5px 12px;
+}
+
+.fakebook .holder .left-column .radio-margins
+{
+    margin: 9px 0 6px 0;
+}
+.fakebook .holder .left-column span
+{
+    color: #ffffff;
+    font-size: 13px;
+}
+.fakebook .holder .left-column fieldset
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fakebook .holder .left-column .radio-label
+{
+    font-size: 7px;
+    color: #ffffff;
+}
+
+.fakebook .holder .left-column input[type="text"]
+{
+    width: 70px;
+    margin: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.fakebook .holder .left-column input[type="reset"]
+{
+    margin: 5px 5px 5px 0;
+    color: #A0A2B7;
+    background: #DCDDE1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fakebook .holder .right-column
+{
+    width: 298px;
+    margin: 10px 10px 5px 12px;
+}
+
+.fakebook .holder .right-column span
+{
+    color: #ffffff;
+    font-size: 13px;
+}
+.fakebook .holder .right-column fieldset
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.fakebook .holder .right-column input
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fakebook .holder .right-column select
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fakebook .holder .right-column .country-field
+{
+    width: 80px;
+    padding: 0;
+    margin: 0 5px 0 0 ;
+}
+.fakebook .holder .right-column .street-field
+{
+    width: 80px;
+    padding: 0;
+    margin: 7px 7px 0 0 ;
+}
+.fakebook .holder .right-column .ap-nr
+{
+    width: 40px;
+    padding: 0;
+    margin: 7px 7px 0 0 ;
+}
+
+.fakebook .holder .right-column .text
+{
+    color: #ffffff;
+    font-size: 13px;
+    padding: 0;
+    margin: 7px 0 7px 0;
+}
+.fakebook .holder .right-column .color-panel
+{
+    width: 79px;
+    padding: 0;
+    margin: 0 7px 7px 0;
+}
+
+.fakebook .holder .right-column input[type="submit"]
+{
+    margin: 5px 5px 5px 0;
+    color: #A0A2B7;
+    background: #DCDDE1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,83 @@
+.center{text-align: center}
+.w100{width: 100%}
+.w50{width: 50%}
+.left{float: left}
+body{font-family: Arial; padding: 0; margin:0;}
+
+
+.flight-order .holder
+{
+    width:460px;
+    background: pink;
+}
+.flight-order .holder h1
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.flight-order .holder p
+{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    float: left;
+}
+
+.flight-order .holder .text
+{
+    font-size: 8px;
+    margin: 3px 0 3px 0;
+}
+
+.flight-order .holder .left-column
+{
+    width: 208px;
+    margin:0 10px 0 10px;
+    padding:10px 0 0 0;
+}
+
+.flight-order .holder .left-column .departure
+{
+    margin: 8px 0 0 0 ;
+}
+
+.flight-order .holder .left-column .left-column-bottom
+{
+    width: 64px;
+    margin: 0 5px 0 0;
+    padding: 0px;
+}
+
+.flight-order .holder .right-column
+{
+    width: 208px;
+    margin: 0 10px 0 10px;
+    padding:10px 0 0 0;
+}
+
+.flight-order .holder .right-column .check-field input
+{
+    margin: 0px;
+}
+
+.flight-order .holder .right-column .check-field label
+{
+    margin: 0px;
+    padding: 0px;
+    font-style: italic;
+    font-size: 8px;
+}
+
+.flight-order .holder .right-column .time-interval
+{
+    width: 94px;
+    margin: 0 5px 0 0;
+}
+
+.flight-order .holder .search-button
+{
+    margin: 0 0 0 0;
+}
+

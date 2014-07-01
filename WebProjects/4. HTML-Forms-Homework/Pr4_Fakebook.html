@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fakebook</title>
+    <link type="text/css" rel="stylesheet" href="pr4_style.css"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+</head>
+<body>
+<div class="left w100 fakebook">
+    <div class="left w100 holder">
+        <div class="center w100">
+            <span class="logo-text">fakebook</span>
+            <span class="registered-trademark">&#174</span>
+        </div>
+        <div class="center w100">
+            <div class="center w100">
+                <span class="center registration-text w100">Registration</span>
+            </div>
+            <div class="center w100">
+                <span class="center w100 save-text">It is save and it will always be!</span>
+            </div>
+        </div>
+        <div class="left w100">
+            <div class="left left-column">
+                <form method="post" action="#">
+                    <fieldset class="left">
+                        <legend><span>None-Important Information</span></legend>
+                        <div class="left w100">
+                            <input type="text" value="First Name" class="left"/>
+                            <input type="text" value="Last Name" class="left"/>
+                        </div>
+                        <div class="left w100">
+                            <input type="text" value="Your Email" class="left"/>
+                            <input type="text" value="Phone Number" class="left"/>
+                        </div>
+                        <div class="left w100">
+                            <input type="text" value="Your Password" class="left"/>
+                            <input type="text" value="Website" class="left"/>
+                        </div>
+                        <div class="left w100">
+                            <span class="left w100">Birthday</span>
+                            <input type="date" class="left w100">
+                        </div>
+                        <div class="left w100 radio-margins">
+                            <input type="radio" value="Female" id="female" class="left"/>
+                            <label for="female" class="left radio-label">Female</label>
+                            <input type="radio" value="Male" class="left" id="male"/>
+                            <label for="male" class="left radio-label">Male</label>
+                            <input type="radio" value="Other" id="other" class="left"/>
+                            <label for="other" class="left radio-label">Other</label>
+                        </div>
+                    </fieldset>
+                    <div class="left w100">
+                        <input type="reset" value="Clear Form" class="left w100">
+                    </div>
+                </form>
+            </div>
+            <div class="left right-column w100">
+                <div class="left w100">
+                    <form method="post" action="#">
+                        <fieldset class="left">
+                            <legend><span>Important Information *required</span></legend>
+                            <div class="left">
+                                <form class="left">
+                                    <div class="left w100">
+                                        <select class="left country-field">
+                                            <option value="DEF">Country</option>
+                                            <option value="BG">Bulgaria</option>
+                                        </select>
+                                        <input type="text" value="Village" class="left country-field"/>
+                                        <input type="text" value="District" class="left country-field"/>
+                                    </div>
+                                    <div class="left w100">
+                                        <input type="text" value="Street" class="left street-field"/>
+                                        <input type="text" value="Nr" class="left ap-nr"/>
+                                        <input type="text" value="Floor" class="left ap-nr"/>
+                                        <input type="text" value="Ap Nr" class="left ap-nr"/>
+                                    </div>
+                                    <div class="left w100">
+                                        <div class="left w100">
+                                            <span class="left text">Door Color</span>
+                                        </div>
+                                        <div class="left w100">
+                                            <input type="color" name="color-picker" class="left color-panel"/>
+                                            <input type="text" value="Water Meter Nr" class="left color-panel"/>
+                                            <select class="left color-panel">
+                                                <option value="DEF" class="left">Aunt Panties' Size</option>
+                                                <option value="First Val" class="left">100cm</option>
+                                                <option value="Second Val" class="left">200cm</option>
+                                                <option value="Third Val" class="left">300cm</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="left w100">
+                                        <div class="left w100"><span>More Personal Information</span></div>
+                                    </div>
+                                    <div class="left w100">
+                                        <textarea class="left" name="more info">Give Us More Information!!!</textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </fieldset>
+                        <div class="left w100">
+                            <input type="submit" value="Register" class="left w100">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.left{float: left}
+.w100{width: 100%}
+body{font-family: Arial; padding: 0; margin:0;}
+
+img.max-dimensions
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a.logo-holder {
+    width:376px;
+}
+
+.wordpress-theme .holder
+{
+    width:460px;
+}
+
+.wordpress-theme .holder .search-text
+{
+    line-height: 32px;
+}

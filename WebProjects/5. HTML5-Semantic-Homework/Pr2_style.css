@@ -1,0 +1,47 @@
+.left{float: left}
+.center{text-align: center}
+.w100{width: 100%}
+body{margin: 0;padding: 0;font-family: Arial; width: 100%}
+
+.kent .holder
+{
+    background: #ffc0cb;
+    width: 100%;
+}
+
+.kent .holder .aside
+{
+    width: 320px;
+    margin: 30px 15px 40px 25px;
+    padding: 0;
+    border: 0;
+}
+.kent .holder .aside img
+{
+    min-width: 250px;
+    max-width: 340px;
+}
+
+.kent .holder .progress-meter
+{
+    width: 165px;
+}
+.kent .holder .audio-section
+{
+    margin: 30px 15px 40px 25px;
+    padding: 0;
+    border: 0;
+}
+
+.kent .holder .audio-section .audio-file
+{
+    margin: 10px 0 0 0 ;
+}
+
+.kent .holder .video-section
+{
+    width: 310px;
+    margin: 30px 15px 40px 20px;
+    padding: 0;
+    border: 0;
+}

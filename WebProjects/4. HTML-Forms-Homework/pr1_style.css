@@ -1,0 +1,140 @@
+
+.left{float:left;}
+.right{float:right;}
+.w100{width:100%}
+.pointer{cursor:pointer;}
+
+body{font-family: Arial; padding: 0; margin:0;}
+
+.simple_form .holder {
+    width:460px;
+    background:#eeeeee;
+}
+.simple_form .holder h1
+{
+    color:#234465;
+    width:455px;
+    font-weight:bold;
+    margin:10px 0 0 5px;
+    font-size:15px;
+}
+.simple_form .holder .info_text
+{
+    font-size:10px;
+    width:455px;
+    color:#737373;
+    margin:10px 0 0 5px;
+}
+
+.simple_form .holder .left_column
+{
+    width: 208px;
+    margin:10px 0 0 18px;
+    padding:10px 0 0 0;
+    height:174px;
+}
+.simple_form .holder .left_column .heading
+{
+    text-transform:uppercase;
+    color: #737373;
+    font-size:13px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+.simple_form .holder .left-column .heading a{
+    color: #234465;
+    text-decoration:none;
+}
+
+.simple_form .holder .left-column .heading a:hover{
+    color: #234465;
+    text-decoration:underline;
+}
+
+.simple_form .holder .left_column form input[type=text], .simple_form .holder .left_column form input[type=password] {
+    border:1px solid #737373;
+    height:23px;
+    width:186px;
+    padding:0 10px;
+    margin-bottom:8px;
+    font-size:12px;
+    color:#737373;
+}
+
+.simple_form .holder .left-column form input[type=password]:last-child {
+    margin-bottom:0px;
+}
+
+.simple_form .holder .left-column form input[type=submit] {
+    width:103px;
+    border:1px solid #234465;
+    height:21px;
+    line-height:21px;
+    font-size:12px;
+    padding:0 29px;
+    background:#fff;
+}
+
+.simple_form .holder .right_column {
+    width:206px;
+    margin:10px 2px 0 0;
+    background: #234465;
+    padding:10px 10px 0 10px;
+    height:174px;
+}
+
+.simple_form .holder .right_column .heading {
+    text-transform:uppercase;
+    color: #fff;
+    font-size:13px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+.simple_form .holder .right-column form input[type=text], .simple_form .holder .right-column form input[type=password] {
+    border:1px solid #737373;
+    height:23px;
+    width:186px;
+    padding:0 10px;
+    margin-bottom:8px;
+    font-size:12px;
+    color:#737373;
+}
+
+.simple_form .holder .right_column .check_field {
+    width:95px;
+}
+
+.simple_form .holder .right_column .check_field input {
+    margin:0px;
+}
+
+.simple_form .holder .right_column .check_field label {
+    color:#fff;
+    font-size:10px;
+}
+
+.simple_form .holder .right_column .login_field{
+    width:95px;
+}
+
+.simple_form .holder .right_column .login_field input {
+    padding:0 25px;
+    border:1px solid #a17828;
+    height:21px;
+    line-height:21px;
+    font-size: 12px;
+    color:#fff;
+    background:#234465;
+    width:100%;
+}
+
+.simple_form .holder .right_column .login_field a {
+    color:#fff;
+    font-size:8px;
+    margin-top:15px;
+    width:100%;
+    text-align:right;
+    float:left;
+}
