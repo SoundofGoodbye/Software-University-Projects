@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Software University</title>
+<subtitle type="text">A beautiful theme.</subtitle>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://jekyll.gtat.me/feed.xml" />
+<link rel="alternate" type="text/html" href="http://jekyll.gtat.me" />
+<updated>2014-07-12T21:49:29+01:00</updated>
+<id>http://jekyll.gtat.me/</id>
+<author>
+  <name>Cole Townsend</name>
+  <uri>http://jekyll.gtat.me/</uri>
+  <email>cole@coletownsend.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[SoftUni Fast track Courses]]></title>
+  <link rel="alternate" type="text/html" href="http://jekyll.gtat.me/articles/Soft-Uni-Fast-Track-Courses" />
+  <id>http://jekyll.gtat.me/articles/Soft-Uni-Fast-Track-Courses</id>
+  <published>2014-07-12T00:00:00+01:00</published>
+  <updated>2014-07-12T00:00:00+01:00</updated>
+  <author>
+    <name>Cole Townsend</name>
+    <uri>http://jekyll.gtat.me</uri>
+    <email>cole@coletownsend.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Apply for our new Fast Track Courses&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://jekyll.gtat.me/articles/Soft-Uni-Fast-Track-Courses&quot;&gt;SoftUni Fast track Courses&lt;/a&gt; was originally published by Cole Townsend at &lt;a href=&quot;http://jekyll.gtat.me&quot;&gt;Software University&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[About Software University]]></title>
+  <link rel="alternate" type="text/html" href="http://jekyll.gtat.me/articles/About-SoftUni" />
+  <id>http://jekyll.gtat.me/articles/About-SoftUni</id>
+  <published>2014-07-12T00:00:00+01:00</published>
+  <updated>2014-07-12T00:00:00+01:00</updated>
+  <author>
+    <name>Cole Townsend</name>
+    <uri>http://jekyll.gtat.me</uri>
+    <email>cole@coletownsend.com</email>
+  </author>
+  <content type="html">&lt;p&gt;For us and for the whole software industry the practical experience is the most important thing.
+Our mission is to make our trainees true professionals in the software industry and support them in
+finding employment. &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://jekyll.gtat.me/articles/About-SoftUni&quot;&gt;About Software University&lt;/a&gt; was originally published by Cole Townsend at &lt;a href=&quot;http://jekyll.gtat.me&quot;&gt;Software University&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Jekyll Post]]></title>
+  <link rel="alternate" type="text/html" href="http://jekyll.gtat.me/articles/My%20Jekyll%20Post" />
+  <id>http://jekyll.gtat.me/articles/My Jekyll Post</id>
+  <published>2014-07-10T00:00:00+01:00</published>
+  <updated>2014-07-10T00:00:00+01:00</updated>
+  <author>
+    <name>Cole Townsend</name>
+    <uri>http://jekyll.gtat.me</uri>
+    <email>cole@coletownsend.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Hello dear readers.
+This is my first post using Jekyll.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://jekyll.gtat.me/articles/My%20Jekyll%20Post&quot;&gt;Jekyll Post&lt;/a&gt; was originally published by Cole Townsend at &lt;a href=&quot;http://jekyll.gtat.me&quot;&gt;Software University&lt;/a&gt; on July 10, 2014.&lt;/p&gt;</content>
+</entry>
+
+</feed>
