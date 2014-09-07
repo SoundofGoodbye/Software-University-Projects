@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    float: left
+}
+
+.w100 {
+    width: 100%
+}
+
+.holder .text-field {
+    width: 20%;
+    background-color: #234465;
+}
+
+.holder .text-field input {
+    width: 80%;
+    background-color: #234465;
+    color: #FF9C00;
+    border: 0;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.holder .text-field input::selection {
+    border: 0;
+}
+
+.holder .result-field {
+    width: 20%;
+    background-color: #234465;
+}
+.holder .result-field p {
+    color: #FF9C00;
+    padding-left: 10%;
+}
