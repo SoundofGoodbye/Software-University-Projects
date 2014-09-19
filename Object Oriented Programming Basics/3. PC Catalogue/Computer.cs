@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-class Computer
+class Computer : IComparable 
 {
     private String name;
 
@@ -89,12 +89,27 @@ class Computer
         foreach (Component currentComponent in componentsList)
         {
             strBuilder.Append("Name: " + currentComponent.Name + Environment.NewLine);
-            strBuilder.Append(string.Format("Price: {0:C} {1}", currentComponent.Price,Environment.NewLine));
+            strBuilder.Append(string.Format("Price: {0:C} {1}", currentComponent.Price, Environment.NewLine));
             totalPrice += currentComponent.Price;
         }
 
         strBuilder.Append(string.Format("Total Price: {0:C}", totalPrice));
 
         return strBuilder.ToString();
+    }
+
+    public int CompareTo(object obj)
+    {
+        if (obj == null) return 1;
+        Computer comp = obj as Computer;
+
+        if (comp != null)
+        {
+            return this.price.CompareTo(comp.Price);
+        }
+        else
+        {
+            throw new ArgumentException("Object is not a Computer");
+        }
     }
 }
