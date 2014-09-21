@@ -4,18 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2.Static_Members_and_Namespaces_Homework
+namespace Paths
 {
-    class Point3D
+    public class Point3D
     {
 
-        private readonly Point3D StartingPoint = new Point3D(0, 0, 0);
+        private static readonly Point3D StartingPoint = new Point3D(0, 0, 0);
 
         private int X;
 
         private int Y;
 
         private int Z;
+
+
+        static Point3D()
+        {
+            StartingPoint = new Point3D(0, 0, 0);
+        }
+
+        public Point3D()
+        {
+
+        }
 
         public Point3D(int x, int y, int z)
         {
@@ -60,7 +71,7 @@ namespace _2.Static_Members_and_Namespaces_Homework
 
         public override string ToString()
         {
-            return string.Format("PointX : {0}, PointY: {1}, PointZ: {2}, StartingPoint: {3}", PointX, PointY, PointZ, StartPoint);
+            return string.Format("PointX : {0}, PointY: {1}, PointZ: {2}", PointX, PointY, PointZ);
         }
     }
 }
