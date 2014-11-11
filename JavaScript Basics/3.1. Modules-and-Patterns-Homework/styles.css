@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    padding: 5px;
+}
+
+hr {
+    width: 440px;
+}
+
+div#container {
+    border: 1px solid #000;
+    width: 500px;
+    margin: 0 auto;
+}
+
+div#container > div {
+    border: 1px solid #000;
+}
+
+div#container > div > div > div {
+    display: inline-block;
+    padding: 0 5px 0 5px;
+}
+
+h2 {
+    text-align: right;
+}
+
+h1 {
+    text-align: center;
+}
+
+div#new-section-wrapper > input {
+    margin: 1%;
+}
+
+div#new-element-wrapper > input {
+    margin: 1%;
+}
+
+.item-element {
+    width: 100%;
+}
+
+.itemCheckbox:checked + label[for*="checkbox"], label[htmlFor*="checkbox"] {
+    background-color: green;
+}
+
+label[for*="checkbox"], label[htmlFor*="checkbox"] {
+    border-bottom: 1px solid black;
+    width: 90%;
+    display: inline-block;
+}
