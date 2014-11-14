@@ -13,49 +13,61 @@
         }
     };
 
+    function isInteger(x) {
+        return ((x ^ 0) === x);
+    }
+
     Object.prototype.extends = function (parent) {
         if (parent) {
             this.prototype = Object.create(parent.prototype);
             this.prototype.constructor = this;
         }
+        ;
     }
 
     Object.prototype.validateIsInteger = function (value, valueName) {
         if (!(value === parseInt(value, 10))) {
             throw new TypeError(valueName + " should be of type integer.");
         }
+        ;
     }
 
     Object.prototype.validateString = function (value, valueName) {
         if (!value || typeof (value) !== Types.String) {
             throw new Error(valueName + " should be non-empty string.");
         }
+        ;
     }
 
     Object.prototype.validateNumberInRange = function (minRange, maxRange, value) {
         if (typeof (value) != 'number') {
             throw new Error("Variable should be of type number.");
         }
+        ;
 
-        if(value !== parseInt(value, 10)) {
+        if (value !== parseInt(value, 10)) {
             throw new TypeError("Variable should be integer.");
         }
+        ;
 
         if (value < minRange || value > maxRange) {
             throw new Error("Invalid range passed.");
         }
+        ;
     }
 
     Object.prototype.validatePositiveInteger = function (price) {
         if (price < 0) {
             throw new Error("Price must be positive.");
         }
+        ;
     }
 
     Object.prototype.validateBoolean = function (value, valueName) {
         if (typeof value !== Types.Boolean) {
             throw new TypeError("Parameter: " + valueName + " should be a boolean variable.");
         }
+        ;
     }
 
     /**
@@ -77,6 +89,9 @@
 
         Estate.prototype.setArea = function (area) {
             this.validateNumberInRange(1, 10000, area);
+            if (! isInteger(area)) {
+                throw new Error('Area should be an integer number.');
+            }
             this._area = area;
         }
 
@@ -144,6 +159,9 @@
 
         BuildingEstate.prototype.setRooms = function (rooms) {
             this.validateNumberInRange(0, 100, rooms);
+            if(!isInteger(rooms)) {
+                throw new Error('Rooms should be an integer number.');
+            }
             this._rooms = rooms;
         }
 
@@ -208,6 +226,9 @@
 
         House.prototype.setFloors = function (floors) {
             this.validateNumberInRange(1, 10, floors);
+            if(!isInteger(floors)) {
+                throw new Error('Floors should be an integer number.');
+            }
             this._floors = floors;
         }
 
@@ -237,6 +258,9 @@
 
         Garage.prototype.setWidth = function (width) {
             this.validateNumberInRange(1, 500, width);
+            if(!isInteger(width)) {
+                throw new Error('Width should be an integer number.');
+            }
             this._width = width;
         }
 
@@ -246,6 +270,9 @@
 
         Garage.prototype.setHeight = function (height) {
             this.validateNumberInRange(1, 500, height);
+            if(!isInteger(height)) {
+                throw new Error('Height should be an integer number.');
+            }
             this._height = height;
         }
 
@@ -285,6 +312,9 @@
 
         Offer.prototype.setPrice = function (price) {
             this.validatePositiveInteger(price);
+            if (! isInteger(price)) {
+                throw new Error('Price should be an integer number.');
+            }
             this._price = price;
         }
 
