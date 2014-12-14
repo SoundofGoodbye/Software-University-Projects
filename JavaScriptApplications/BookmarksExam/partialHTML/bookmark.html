@@ -1,0 +1,18 @@
+<div id="bookmarks">
+    <ul>
+        {{#results}}
+        <li>
+            {{title}} - {{url}}
+            <input type="button" value="X" id="{{objectId}}" class="delete-bookmark-btn"/>
+        </li>
+        {{/results}}
+    </ul>
+    <div id="add-bookmark">
+        <label for="bookmark-title">Bookmark Title</label>
+        <input type="text" id="bookmark-title" placeholder="Add bookmark title here."/>
+        <br/>
+        <label for="bookmark-url">Bookmark Url</label>
+        <input type="text" id="bookmark-url" placeholder="Enter bookmark URL here."/>
+        <input type="button" value="Add bookmark" id="add-bookmark-btn"/>
+    </div>
+</div>
