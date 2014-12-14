@@ -1,0 +1,31 @@
+{
+  "name": "BookmarksExamPreparation",
+  "version": "0.0.0",
+  "description": "JavaScript Application for training about the upcoming JS App exam.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoundofGoodbye/Software-University-Projects"
+  },
+  "keywords": [
+    "js",
+    "app",
+    "exam"
+  ],
+  "author": "MAtanas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SoundofGoodbye/Software-University-Projects/issues"
+  },
+  "homepage": "https://github.com/SoundofGoodbye/Software-University-Projects",
+  "dependencies": {
+    "jquery": "^2.1.1",
+    "mustache": "^0.8.2",
+    "noty": "^2.3.2",
+    "q": "^1.1.2",
+    "shimney-sammy": "^0.7.4"
+  }
+}
