@@ -1,0 +1,1 @@
+var dynamicImageApp = angular.module('DynamicImageApp', []);
