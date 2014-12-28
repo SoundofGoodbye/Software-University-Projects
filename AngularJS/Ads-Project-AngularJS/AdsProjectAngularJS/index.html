@@ -6,17 +6,25 @@
 </head>
 <body data-ng-app="adsProjectApp">
 
-<!-- Head navigation container -->
-<header id="head-container"></header>
 <!-- Content container -->
-<div id="container">
+<div id="wrapper">
+    <!-- Head navigation container -->
+    <header id="head-container"></header>
 
+    <div id="container">
+        <data-ng-view></data-ng-view>
+    </div>
+
+    <footer></footer>
 </div>
 
-<!-- Loading scripts-->
+<!-- Loading scripts -->
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular/angular-route.js"></script>
 <script src="lib/angular/angular-resource.js"></script>
 <script src="scripts/app.js"></script>
+<script src="scripts/services/register-service.js"></script>
+<script src="scripts/controllers/RegisterController.js"></script>
+<script src="scripts/controllers/HomeController.js"></script>
 </body>
 </html>
