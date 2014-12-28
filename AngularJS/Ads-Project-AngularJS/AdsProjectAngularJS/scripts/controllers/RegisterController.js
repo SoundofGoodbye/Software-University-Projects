@@ -1,13 +1,34 @@
 adApplication.controller('RegisterController', function ($scope, $location, $log, registerService) {
-    $scope.callRegisterService = function (user) {
+    $scope.callRegisterService = function () {
+        var user = {
+            username: $scope.username,
+            password: $scope.password,
+            confirmPassword: $scope.confirmPassword,
+            name: $scope.name,
+            email: $scope.email,
+            phone: $scope.phone,
+            town: $scope.town
+        };
+
         registerService.callRegister(user)
             .$promise
             .then(function (data) {
-                //TODO: Add notification for successful login.
-                $log('Success')
+                noty({
+                    text: 'User account created. Please login.',
+                    type: 'success',
+                    layout: 'top',
+                    timeout: 5000
+                });
+                $location.path('/login');
             },
             function (error) {
-                $log.error(error);
+                noty({
+                    //TODO: Fix error display.
+                    text: error.responseJSON,
+                    type: 'error',
+                    layout: 'top',
+                    timeout: 5000
+                })
             });
     };
 

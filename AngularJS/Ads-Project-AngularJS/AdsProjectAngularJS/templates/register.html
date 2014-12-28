@@ -1,1 +1,60 @@
-<h1>Register</h1>
+<div class="jumbotron">
+    <h2>User Registration</h2>
+    <hr/>
+    <form data-ng-submit="callRegisterService()" data-ng-controller="RegisterController">
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="username-register">Username</label>
+                <input type="text" class="form-control" id="username-register" placeholder="Enter username"
+                       required="required" data-ng-model="username">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="password-register">Password</label>
+                <input type="password" class="form-control" id="password-register" placeholder="Enter password"
+                       required="required" data-ng-model="password">
+            </div>
+            <div class="col-sm-6">
+                <label for="confirm-register">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm-register" placeholder="Enter password"
+                       required="required" data-ng-model="confirmPassword">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="name-register">Name</label>
+                <input type="text" class="form-control" id="name-register" placeholder="Enter Name" required="required" data-ng-model="name">
+            </div>
+            <div class="col-sm-6">
+                <label for="email-register">Email</label>
+                <input type="email" class="form-control" id="email-register" placeholder="Enter email"
+                       required="required" data-ng-model="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="phone-register">Phone</label>
+                <input type="text" class="form-control" id="phone-register" placeholder="Enter phone number" data-ng-model="phone">
+            </div>
+            <div class="col-sm-6">
+                <label for="town-register">Town</label>
+                <select class="form-control" id="town-register" data-ng-model="town">
+                    <option>Sofia</option>
+                    <option>Varna</option>
+                    <option>Burgas</option>
+                    <option>Pleven</option>
+                    <option>Plovdiv</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="submit" value="Register"/>
+            </div>
+            <div class="col-sm-6">
+                <a href="">Login here</a>
+            </div>
+        </div>
+    </form>
+</div>
