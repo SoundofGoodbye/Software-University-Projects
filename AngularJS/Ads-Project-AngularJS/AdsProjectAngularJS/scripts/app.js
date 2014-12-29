@@ -1,4 +1,4 @@
-var adApplication = angular.module('adsProjectApp', ['ngRoute','ngResource'])
+var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource'])
     .config(function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'templates/home.html',
@@ -7,5 +7,6 @@ var adApplication = angular.module('adsProjectApp', ['ngRoute','ngResource'])
         $routeProvider.when('/register', {
             templateUrl: 'templates/register.html',
             controller: 'RegisterController'
-        })
+        });
+        $routeProvider.otherwise({redirectTo: '/'});
     });
