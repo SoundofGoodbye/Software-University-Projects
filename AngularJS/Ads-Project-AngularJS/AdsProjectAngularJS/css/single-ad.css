@@ -1,0 +1,17 @@
+.ad-image-style img {
+    max-width: 100px;
+}
+
+.ad-image-style {
+    max-width: 120px;
+    background-color: #C5E0B4;
+    border: 1px dashed #649B3F;
+}
+
+.ad-container {
+    background-color: #A9D18E;
+}
+
+.ad-container-style {
+    background-color: #A9D18E;
+}

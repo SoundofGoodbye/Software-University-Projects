@@ -1,0 +1,28 @@
+<div class="jumbotron" id="login-form-wrapper" data-ng-class="loginStyle">
+    <h2>Login</h2>
+    <hr/>
+    <form data-ng-submit="callLoginService()" data-ng-controller="LoginController" >
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="username-login">Username</label>
+                <input type="text" class="form-control" id="username-login" placeholder="Enter username"
+                       required="required" data-ng-model="username">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="password-login">Password</label>
+                <input type="password" class="form-control" id="password-login" placeholder="Enter password"
+                       required="required" data-ng-model="password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="submit" value="Login" class="btn btn-lg btn-success col-sm-12"/>
+            </div>
+            <div class="col-sm-6">
+                <a href="#/register">Register here</a>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+<div class="row">
+    <span class="col-sm-6">{{singleAd.title}}</span>
+    <span class="col-sm-6">{{singleAd.date}}</span>
+</div>
+<div class="row col-sm-12">
+    <div class="col-sm-6">
+        <div data-ng-class="adImage">
+            <div data-ng-if="singleAd.imageDataUrl !== null">
+                <img src="" data-ng-src="{{singleAd.imageDataUrl}}"/>
+            </div>
+            <div data-ng-if="singleAd.imageDataUrl === null">
+                <img src="images/no-image.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6" data-ng-class="adContent">
+        <div class="row">
+            <span>{{singleAd.text}}</span>
+        </div>
+        <div class="row">
+            <label>Name</label>
+            <span>{{singleAd.ownerName}}</span>
+        </div>
+        <div class="row">
+            <label>Email</label>
+            <span>{{singleAd.ownerEmail}}</span>
+        </div>
+        <div class="row">
+            <label>Tel.</label>
+            <span>{{singleAd.ownerPhone}}</span>
+        </div>
+    </div>
+</div>
