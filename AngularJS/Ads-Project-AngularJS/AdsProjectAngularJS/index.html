@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/login.css"/>
     <link rel="stylesheet" href="css/single-ad.css"/>
     <link rel="stylesheet" href="css/navigation.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
 </head>
 <body data-ng-app="adsProjectApp">
 
@@ -28,6 +29,9 @@
 
     <footer class="row"></footer>
 </div>
+<footer data-ng-controller="FooterController" data-ng-class="footerStyle">
+    <data-ng-include src="'templates/footer.html'"></data-ng-include>
+</footer>
 
 <!-- Loading scripts -->
 <script src="lib/angular/angular.js"></script>
@@ -57,6 +61,9 @@
 
 <!-- Navigation scripts -->
 <script src="scripts/controllers/NavigationController.js"></script>
+
+<!-- Footer scripts -->
+<script src="scripts/controllers/FooterController.js"></script>
 
 </body>
 </html>
