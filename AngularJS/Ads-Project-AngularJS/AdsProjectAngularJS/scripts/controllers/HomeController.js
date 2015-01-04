@@ -7,6 +7,8 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
     $scope.currentPage = 1;
     $scope.numPerPage = 2;
     $scope.numPages = 0;
+    $scope.maxVisiblePages = 5;
+    $scope.shouldHaveFirstLastButtons = true;
     $scope.ads = [];
 
     paginationService.callCurrentPageAds($scope.currentPage)
@@ -29,6 +31,9 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
                 $scope.totalItems = data.numItems;
                 $scope.numPages = data.numPages;
                 console.log($scope.pages);
+            },
+            function (error) {
+                $log.error(error);
             });
     };
 
@@ -36,6 +41,9 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
         return $scope.numPages;
     };
 
+    /**
+     * Change the title in the header to indicate that the page changed.
+     */
     headerService.setHeader('Ads - Home');
 
     // Add css styles.

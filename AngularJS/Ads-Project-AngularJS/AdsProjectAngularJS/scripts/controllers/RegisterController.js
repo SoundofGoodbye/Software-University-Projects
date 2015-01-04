@@ -1,4 +1,4 @@
-adApplication.controller('RegisterController', function ($scope, $location, $log, registerService, headerService) {
+adApplication.controller('RegisterController', function ($scope, $location, $log, registerService, headerService, loginService) {
     $scope.callRegisterService = function () {
         var user = {
             username: $scope.username,
@@ -14,12 +14,19 @@ adApplication.controller('RegisterController', function ($scope, $location, $log
             .$promise
             .then(function (data) {
                 noty({
-                    text: 'User account created. Please login.',
+                    text: 'User account created.',
                     type: 'success',
                     layout: 'top',
                     timeout: 5000
                 });
-                $location.path('/login');
+                loginService.callLogin(user)
+                    .$promise
+                    .then(function (data) {
+                        $location.path('/');
+                    },
+                    function (error) {
+                        $log.error(error);
+                    });
             },
             function (error) {
                 noty({

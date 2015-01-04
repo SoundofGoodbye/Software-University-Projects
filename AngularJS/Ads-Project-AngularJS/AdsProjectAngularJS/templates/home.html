@@ -4,7 +4,8 @@
          data-ng-include="'templates/ad-view.html'" data-ng-class="adContainerStyle">
     </div>
     <pagination total-items="totalItems" items-per-page="numPerPage" data-ng-model="currentPage"
-                data-ng-change="pageChanged()"></pagination>
+                boundary-links="shouldHaveFirstLastButtons"
+                max-size="maxVisiblePages" data-ng-change="pageChanged()"></pagination>
 </div>
 <!-- Category Filter container -->
 <div class="col-sm-3">
