@@ -1,4 +1,4 @@
-var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource'])
+var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination'])
     .config(function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'templates/home.html',

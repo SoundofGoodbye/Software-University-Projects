@@ -1,4 +1,5 @@
-adApplication.controller('HomeController', function ($scope, $log, paginationService, headerService) {
+adApplication.controller('MyPaginationController', function ($scope, $log, paginationService) {
+
     /**
      * Default setting to 10 items total.
      * @type {number}
@@ -6,7 +7,6 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
     $scope.totalItems = 10;
     $scope.currentPage = 1;
     $scope.numPerPage = 2;
-    $scope.numPages = 0;
     $scope.ads = [];
 
     paginationService.callCurrentPageAds($scope.currentPage)
@@ -14,7 +14,6 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
         .then(function (data) {
             $scope.ads = data.ads;
             $scope.totalItems = data.numItems;
-            $scope.numPages = data.numPages;
         });
 
     $scope.setPage = function (pageNo) {
@@ -26,20 +25,22 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
             .$promise
             .then(function (data) {
                 $scope.ads = data.ads;
-                $scope.totalItems = data.numItems;
-                $scope.numPages = data.numPages;
-                console.log($scope.pages);
             });
     };
 
-    $scope.getNumPages = function () {
-        return $scope.numPages;
+    /**
+     * Calculate the number of pages based on the total items and the items per page.
+     * @returns {number}
+     */
+    $scope.numPages = function () {
+        return Math.ceil($scope.totalItems / $scope.numPerPage);
     };
 
-    headerService.setHeader('Ads - Home');
+    $scope.$watch('currentPage + numPerPage', function () {
 
-    // Add css styles.
-    $scope.adImage = "ad-image-style";
-    $scope.adContent = "ad-content-style";
-    $scope.adContainerStyle = "ad-container-style";
+    });
+
+    $scope.maxSize = 5;
+    $scope.bigTotalItems = 175;
+    $scope.bigCurrentPage = 1;
 });

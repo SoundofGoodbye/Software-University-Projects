@@ -1,9 +1,10 @@
 <!-- Wrapper for the ads listing -->
-
-<div class="col-sm-9">
-    <div class="col-sm-12 jumbotron" data-ng-controller="HomeController" data-ng-repeat="singleAd in ads"
+<div class="col-sm-9" data-ng-controller="HomeController">
+    <div class="col-sm-12 jumbotron" data-ng-repeat="singleAd in ads"
          data-ng-include="'templates/ad-view.html'" data-ng-class="adContainerStyle">
     </div>
+    <pagination total-items="totalItems" items-per-page="numPerPage" data-ng-model="currentPage"
+                data-ng-change="pageChanged()"></pagination>
 </div>
 <!-- Category Filter container -->
 <div class="col-sm-3">
@@ -14,9 +15,4 @@
     <div class="col-sm-12 jumbotron" data-ng-controller="TownFilterController"
          data-ng-include="'templates/town-filter-view.html'">
     </div>
-</div>
-
-<!-- Pagination container -->
-<div class="col-sm-12" data-ng-controller="PaginationController" data-ng-include="'templates/pagination.html'">
-
 </div>
