@@ -1,0 +1,11 @@
+<h2>Categories</h2>
+<hr/>
+
+<ul>
+    <li>
+        <button data-ng-click="filter(1)">All</button>
+    </li>
+    <li data-ng-repeat="currentCategory in categories">
+        <button data-ng-click="filterCategory(currentCategory.id)">{{currentCategory.name}}</button>
+    </li>
+</ul>

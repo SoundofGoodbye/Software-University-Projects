@@ -1,0 +1,11 @@
+<h2>Towns</h2>
+<hr/>
+
+<ul>
+    <li>
+        <button data-ng-click="filter(1)">All</button>
+    </li>
+    <li data-ng-repeat="currentTown in towns">
+        <button data-ng-click="filterTown(currentTown.id)">{{currentTown.name}}</button>
+    </li>
+</ul>

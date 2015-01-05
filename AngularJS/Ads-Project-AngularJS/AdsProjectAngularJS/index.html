@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/single-ad.css"/>
     <link rel="stylesheet" href="css/navigation.css"/>
     <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/filters.css"/>
 </head>
 <body data-ng-app="adsProjectApp">
 
@@ -54,8 +55,6 @@
 <!-- Ad scripts -->
 <script src="scripts/services/ListingService.js"></script>
 
-<script src="scripts/controllers/HomeController.js"></script>
-
 <!-- Header scripts -->
 <script src="scripts/services/HeaderService.js"></script>
 <script src="scripts/controllers/HeaderController.js"></script>
@@ -70,18 +69,20 @@
 <!-- Footer scripts -->
 <script src="scripts/controllers/FooterController.js"></script>
 
-<!-- CategoryFilter scripts -->
-<script src="scripts/services/CategoryFilterService.js"></script>
-<script src="scripts/controllers/CategoryFilterController.js"></script>
-
-<!-- TownFilter scripts -->
-<script src="scripts/services/TownFilterService.js"></script>
-<script src="scripts/controllers/TownFilterController.js"></script>
+<!-- Filter scripts -->
+<script src="scripts/services/filters/CategoryFilterService.js"></script>
+<script src="scripts/controllers/filters/CategoryFilterController.js"></script>
+<script src="scripts/services/filters/TownFilterService.js"></script>
+<script src="scripts/controllers/filters/TownFilterController.js"></script>
+<script src="scripts/services/filters/FilterService.js"></script>
+<script src="scripts/controllers/filters/FiltersController.js"></script>
+<script src="scripts/services/HelperService.js"></script>
 
 <!-- Pagination scripts -->
 <script src="lib/bootstrap/pagination/pagination.js"></script>
-<script src="scripts/filters/NativeForLoopFilter.js"></script>
+<script src="scripts/controllers/filters/NativeForLoopFilter.js"></script>
 <script src="scripts/services/PaginationService.js"></script>
+<script src="scripts/controllers/HomeController.js"></script>
 
 </body>
 </html>

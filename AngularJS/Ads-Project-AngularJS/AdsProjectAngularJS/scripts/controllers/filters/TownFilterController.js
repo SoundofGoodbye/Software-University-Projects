@@ -6,4 +6,6 @@ adApplication.controller('TownFilterController', function ($scope, $log, townFil
         }, function (error) {
             $log.error(error);
         });
+
+    $scope.townContainerStyle = 'town-container-style';
 });

@@ -1,4 +1,4 @@
-adApplication.controller('HomeController', function ($scope, $log, paginationService, headerService) {
+adApplication.controller('HomeController', function ($scope, $log, paginationService, headerService, helperService) {
     /**
      * Default setting to 10 items total.
      * @type {number}
@@ -30,7 +30,6 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
                 $scope.ads = data.ads;
                 $scope.totalItems = data.numItems;
                 $scope.numPages = data.numPages;
-                console.log($scope.pages);
             },
             function (error) {
                 $log.error(error);

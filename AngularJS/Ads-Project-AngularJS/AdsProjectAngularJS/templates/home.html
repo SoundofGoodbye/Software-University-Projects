@@ -8,12 +8,12 @@
                 max-size="maxVisiblePages" data-ng-change="pageChanged()"></pagination>
 </div>
 <!-- Category Filter container -->
-<div class="col-sm-4">
+<div class="col-sm-4" data-ng-controller="FiltersController">
     <div class="col-sm-12 jumbotron" data-ng-controller="CategoryFilterController"
-         data-ng-include="'templates/category-filter-view.html'">
+         data-ng-class="categoryContainerStyle" data-ng-include="'templates/filters/category-filter-view.html'">
     </div>
 
-    <div class="col-sm-12 jumbotron" data-ng-controller="TownFilterController"
-         data-ng-include="'templates/town-filter-view.html'">
+    <div class="col-sm-12 jumbotron" data-ng-controller="TownFilterController" data-ng-class="townContainerStyle"
+         data-ng-include="'templates/filters/town-filter-view.html'">
     </div>
 </div>

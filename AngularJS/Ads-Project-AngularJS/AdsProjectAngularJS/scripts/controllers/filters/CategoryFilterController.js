@@ -7,4 +7,6 @@ adApplication.controller('CategoryFilterController', function ($scope, $log, cat
         function (error) {
             $log.error(error);
         });
+
+    $scope.categoryContainerStyle = 'category-container-style'
 });
