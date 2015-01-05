@@ -1,4 +1,4 @@
-adApplication.factory('categoryFilterService', function ($resource, $http) {
+adApplication.factory('addService', function ($resource, $http) {
 
     var resource = $resource(
         'http://softuni-ads.azurewebsites.net/api/categories',

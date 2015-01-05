@@ -9,5 +9,8 @@ var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource', 'u
         }).when('/login', {
             templateUrl: 'templates/login.html',
             controller: 'LoginController'
+        }).when('/add', {
+            templateUrl: 'templates/add.html',
+            controller: 'AddController'
         }).otherwise({redirectTo: '/'});
     });
