@@ -3,9 +3,9 @@
 
 <ul>
     <li>
-        <button data-ng-click="filter(1)">All</button>
+        <button data-ng-click="filterCategory()">All</button>
     </li>
-    <li data-ng-repeat="currentCategory in categories">
+    <li data-ng-repeat="currentCategory in data.categories">
         <button data-ng-click="filterCategory(currentCategory.id)">{{currentCategory.name}}</button>
     </li>
 </ul>

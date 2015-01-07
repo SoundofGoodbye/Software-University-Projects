@@ -1,9 +1,9 @@
 <!-- Wrapper for the ads listing -->
 <div class="col-sm-8" data-ng-controller="HomeController">
-    <div class="col-sm-12 jumbotron" data-ng-repeat="singleAd in ads"
+    <div class="col-sm-12 jumbotron" data-ng-repeat="singleAd in data.ads"
          data-ng-include="'templates/ad-view.html'" data-ng-class="adContainerStyle">
     </div>
-    <pagination total-items="totalItems" items-per-page="numPerPage" data-ng-model="currentPage"
+    <pagination total-items="data.totalItems" items-per-page="numPerPage" data-ng-model="currentPage"
                 boundary-links="shouldHaveFirstLastButtons"
                 max-size="maxVisiblePages" data-ng-change="pageChanged()"></pagination>
 </div>

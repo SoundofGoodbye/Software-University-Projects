@@ -1,24 +1,27 @@
-adApplication.controller('AddController', function ($scope, $location, $log, addService, headerService) {
-	$scope.callAddService = function() {
-		var ad = {
-			title: $scope.title,
-			text: $scope.text,
-			//TODO image: $scope.image,
-			category: $scope.category,
-			town: $scope.town
-		}
-		console.log(ad);
+adApplication.controller('AddController', function ($scope, $location, $log, addService, headerService, townFilterService, categoryFilterService) {
+    $scope.townData = townFilterService;
+    $scope.catData = categoryFilterService;
 
-		addService.callAdd(ad)
+    $scope.callAddService = function () {
+        var ad = {
+            title: $scope.title,
+            text: $scope.text,
+            //TODO image: $scope.image,
+            categoryId: $scope.catData.getSelectedCatId(),
+            townId: $scope.townData.getSelectedTownId()
+        };
+
+        addService.callAdd(ad)
             .$promise
             .then(function (data) {
                 noty({
-                    text: 'Ad successfully published.',
+                    text: 'Advertisement submitted for approval. Once approved, it will be published.',
                     type: 'success',
                     layout: 'top',
                     timeout: 5000
                 });
-                //TODO: Redirect to ad - view 
+                //TODO: Redirect to ad - view
+                console.log(data);
                 $location.path('/');
             },
             function (error) {
@@ -30,10 +33,12 @@ adApplication.controller('AddController', function ($scope, $location, $log, add
                     timeout: 5000
                 })
             });
-	};
+    };
 
-	/**
-    * Change the header title.
-    */
+    // Add css
+    $scope.newAdStyle = 'create-new-ad-style';
+    /**
+     * Change the header title.
+     */
     headerService.setHeader('Publish new add');
 });

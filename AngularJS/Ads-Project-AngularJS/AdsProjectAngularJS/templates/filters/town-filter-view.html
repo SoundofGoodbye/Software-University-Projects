@@ -3,9 +3,9 @@
 
 <ul>
     <li>
-        <button data-ng-click="filter(1)">All</button>
+        <button data-ng-click="filterTown()">All</button>
     </li>
-    <li data-ng-repeat="currentTown in towns">
+    <li data-ng-repeat="currentTown in data.towns">
         <button data-ng-click="filterTown(currentTown.id)">{{currentTown.name}}</button>
     </li>
 </ul>

@@ -1,26 +1,28 @@
 adApplication.controller('FiltersController', function ($scope, $log, filterService, helperService) {
 
-    //TODO Change to ALL as default
-    $scope.categoryId = 1;
-    $scope.townId = 1;
-
     $scope.filterCategory = function (categoryId) {
-        $scope.categoryId = categoryId;
+        helperService.categoryId = categoryId;
 
         filterData();
     };
 
     $scope.filterTown = function (townId) {
-        $scope.townId = townId;
+        helperService.townId = townId;
 
         filterData();
     };
 
+    function getHelperAds() {
+        helperService.getHelperAds();
+    }
+
     function filterData() {
-        filterService.callFilter($scope.townId, $scope.categoryId)
+        helperService.getHelperAds()
             .$promise
             .then(function (data) {
-                helperService.setAds(data.ads);
+                helperService.ads = data.ads;
+                helperService.totalItems = data.numItems;
+                helperService.numPages = data.numPages;
             },
             function (error) {
                 $log.error(error);

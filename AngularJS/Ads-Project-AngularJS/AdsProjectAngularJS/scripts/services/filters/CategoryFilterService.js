@@ -1,4 +1,18 @@
 adApplication.factory('categoryFilterService', function ($resource, $http) {
+    var selectedCatId;
+    var categories;
+
+    function getSelectedCatId() {
+        return this.selectedCatId;
+    }
+
+    function getCategories() {
+        return categories;
+    }
+
+    function setCategories(categories) {
+        this.categories = categories;
+    }
 
     var CategoryResource = $resource(
         'http://softuni-ads.azurewebsites.net/api/categories',
@@ -11,6 +25,9 @@ adApplication.factory('categoryFilterService', function ($resource, $http) {
     }
 
     return {
-        getAllCategories: getAllCategories
-    }
+        getAllCategories: getAllCategories,
+        get: getCategories,
+        set: setCategories,
+        getSelectedCatId: getSelectedCatId
+    };
 });

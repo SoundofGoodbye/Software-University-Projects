@@ -1,22 +1,21 @@
-adApplication.controller('HomeController', function ($scope, $log, paginationService, headerService, helperService) {
+adApplication.controller('HomeController', function ($scope, $log, headerService, helperService) {
     /**
      * Default setting to 10 items total.
      * @type {number}
      */
-    $scope.totalItems = 10;
     $scope.currentPage = 1;
     $scope.numPerPage = 2;
-    $scope.numPages = 0;
     $scope.maxVisiblePages = 5;
     $scope.shouldHaveFirstLastButtons = true;
-    $scope.ads = [];
+    $scope.data = helperService;
+    helperService.pageNum = 1;
 
-    paginationService.callCurrentPageAds($scope.currentPage)
+    helperService.getHelperAds()
         .$promise
         .then(function (data) {
-            $scope.ads = data.ads;
-            $scope.totalItems = data.numItems;
-            $scope.numPages = data.numPages;
+            helperService.ads = data.ads;
+            helperService.totalItems = data.numItems;
+            helperService.numPages = data.numPages;
         });
 
     $scope.setPage = function (pageNo) {
@@ -24,12 +23,13 @@ adApplication.controller('HomeController', function ($scope, $log, paginationSer
     };
 
     $scope.pageChanged = function () {
-        paginationService.callCurrentPageAds($scope.currentPage)
+        helperService.pageNum = $scope.currentPage;
+        helperService.getHelperAds()
             .$promise
             .then(function (data) {
-                $scope.ads = data.ads;
-                $scope.totalItems = data.numItems;
-                $scope.numPages = data.numPages;
+                helperService.ads = data.ads;
+                helperService.totalItems = data.numItems;
+                helperService.numPages = data.numPages;
             },
             function (error) {
                 $log.error(error);
