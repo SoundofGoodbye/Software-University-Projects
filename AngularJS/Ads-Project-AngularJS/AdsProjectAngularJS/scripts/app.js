@@ -1,5 +1,7 @@
 var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination'])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $httpProvider) {
+
+        // Routing
         $routeProvider.when('/', {
             templateUrl: 'templates/home.html',
             controller: 'HomeController'

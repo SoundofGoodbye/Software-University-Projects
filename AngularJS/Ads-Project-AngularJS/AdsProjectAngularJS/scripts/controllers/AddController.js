@@ -1,12 +1,14 @@
 adApplication.controller('AddController', function ($scope, $location, $log, addService, headerService, townFilterService, categoryFilterService) {
     $scope.townData = townFilterService;
     $scope.catData = categoryFilterService;
+    $scope.imageDataUrl = null;
 
     $scope.callAddService = function () {
         var ad = {
             title: $scope.title,
             text: $scope.text,
             //TODO image: $scope.image,
+            imageDataUrl: $scope.imageDataUrl,
             categoryId: $scope.catData.getSelectedCatId(),
             townId: $scope.townData.getSelectedTownId()
         };
@@ -21,7 +23,6 @@ adApplication.controller('AddController', function ($scope, $location, $log, add
                     timeout: 5000
                 });
                 //TODO: Redirect to ad - view
-                console.log(data);
                 $location.path('/');
             },
             function (error) {
@@ -33,6 +34,21 @@ adApplication.controller('AddController', function ($scope, $location, $log, add
                     timeout: 5000
                 })
             });
+    };
+
+    $scope.fileSelected = function(fileInputField) {
+        //delete $scope.adData.imageDataUrl;
+        var file = fileInputField.files[0];
+        if (file.type.match(/image\/.*/)) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                $scope.imageDataUrl = reader.result;
+                $(".image-box").html("<img src='" + reader.result + "'>");
+            };
+            reader.readAsDataURL(file);
+        } else {
+            $(".image-box").html("<p>File type not supported!</p>");
+        }
     };
 
     // Add css
