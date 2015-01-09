@@ -17,13 +17,15 @@
 <body data-ng-app="adsProjectApp">
 
 <!-- Header container -->
-<header id="head-container" data-ng-controller="HeaderController">{{headerService.getHeader()}}</header>
+<header id="head-container" data-ng-controller="HeaderController">
+    <data-ng-include src="'templates/header.html'"></data-ng-include>
+</header>
 
 <!-- Content container -->
 <div id="wrapper" class="container">
     <!-- Navigation container -->
     <nav class="col-sm-3 jumbotron" data-ng-class="navStyle" data-ng-controller="NavigationController">
-        <data-ng-include src="'templates/nav-login-register.html'"></data-ng-include>
+        <data-ng-include src="navigationPath"></data-ng-include>
     </nav>
 
     <!-- Main content container -->
@@ -56,9 +58,12 @@
 <!-- Ad scripts -->
 <script src="scripts/services/ListingService.js"></script>
 
+<script src="scripts/services/UserService.js"></script>
+
 <!-- Header scripts -->
 <script src="scripts/services/HeaderService.js"></script>
 <script src="scripts/controllers/HeaderController.js"></script>
+
 
 <!-- Navigation scripts -->
 <script src="scripts/controllers/NavigationController.js"></script>
@@ -82,6 +87,11 @@
 <!-- Pagination scripts -->
 <script src="lib/bootstrap/pagination/pagination.js"></script>
 <script src="scripts/controllers/HomeController.js"></script>
+
+<!-- Header scripts -->
+<script src="scripts/services/MyAdsService.js"></script>
+<script src="scripts/services/MyAdsHelperService.js"></script>
+<script src="scripts/controllers/MyAdsController.js"></script>
 
 </body>
 </html>

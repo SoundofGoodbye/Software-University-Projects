@@ -1,7 +1,4 @@
 adApplication.factory('addService', function ($resource, $http, $window) {
-
-    console.log("AddService");
-    console.log($window.sessionStorage.token);
     $http.defaults.headers.common.Authorization = 'Bearer ' + $window.sessionStorage.token;
 
     var resource = $resource(

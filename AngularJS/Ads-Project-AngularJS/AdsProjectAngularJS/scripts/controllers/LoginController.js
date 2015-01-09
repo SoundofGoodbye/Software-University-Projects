@@ -1,4 +1,4 @@
-adApplication.controller('LoginController', function ($scope, $location, $window, loginService, headerService) {
+adApplication.controller('LoginController', function ($scope, $location, $window, $rootScope, loginService, headerService) {
     $scope.callLoginService = function () {
         var user = {
             username: $scope.username,
@@ -14,14 +14,14 @@ adApplication.controller('LoginController', function ($scope, $location, $window
                     layout: 'top',
                     timeout: 5000
                 });
-                //TODO: Save session token somewhere.
                 $window.sessionStorage.token = data.access_token;
-                console.log("LoginController Success");
-                console.log($window.sessionStorage.token);
+                $window.sessionStorage.username = data.username;
+                $rootScope.$broadcast("renderInfoLogin", $window);
                 $location.path('/');
             },
             function (error) {
                 delete $window.sessionStorage.token;
+                delete $window.sessionStorage.username;
                 //TODO: Noty error
             });
     };

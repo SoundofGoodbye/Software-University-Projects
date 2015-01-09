@@ -12,5 +12,5 @@ adApplication.factory('headerService', function () {
     return {
         setHeader: setHeader,
         getHeader: getHeader
-    }
+    };
 });
