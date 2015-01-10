@@ -1,22 +1,24 @@
-adApplication.controller('MyAdsController', function ($scope, myAdsService, myAdsHelperService) {
+adApplication.controller('MyAdsController', function ($scope, $location, myAdsHelperService) {
 
     $scope.numPerPage = 2;
-    $scope.totalItems;
-    $scope.currentPage;
-    $scope.ads;
+    $scope.currentPage = 1;
+    $scope.data = myAdsHelperService;
 
-    myAdsService.callMyAds()
+    myAdsHelperService.pageNum = $scope.currentPage;
+
+    myAdsHelperService.getAds()
         .$promise
         .then(function (data) {
-            $scope.totalItems = data.numItems;
-            $scope.ads = data.ads;
+            myAdsHelperService.ads = data.ads;
+            myAdsHelperService.totalItems = data.numItems;
+            myAdsHelperService.numPages = data.numPages;
         }, function (error) {
 
         });
 
     $scope.pageChanged = function () {
         myAdsHelperService.pageNum = $scope.currentPage;
-        myAdsHelperService.getHelperAds()
+        myAdsHelperService.getAds()
             .$promise
             .then(function (data) {
                 myAdsHelperService.ads = data.ads;
@@ -26,5 +28,18 @@ adApplication.controller('MyAdsController', function ($scope, myAdsService, myAd
             function (error) {
                 $log.error(error);
             });
+    };
+
+    $scope.editAd = function (selectedAdId) {
+        $location.path('/edit/' + selectedAdId);
+    };
+
+    $scope.adImage = "ad-image-style";
+    $scope.adContent = "ad-content-style";
+    $scope.adContainerStyle = "ad-container-style";
+    $scope.statusContainer = "status-container";
+
+    $scope.getNumPages = function () {
+        return $scope.numPages;
     };
 });

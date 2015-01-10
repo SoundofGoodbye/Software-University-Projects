@@ -7,7 +7,7 @@ adApplication.factory('helperService', function ($resource, $http) {
     var numPages;
 
     var resource = $resource(
-        'http://softuni-ads.azurewebsites.net/api/ads?townid=:townId&categoryid=:categoryId&pagesize=2&startpage=:pageNum',
+        'http://softuni-ads.azurewebsites.net/api/ads?townid=:townId&categoryid=:categoryId&pagesize=2& =:pageNum',
         {
             getAds: {
                 method: 'GET'

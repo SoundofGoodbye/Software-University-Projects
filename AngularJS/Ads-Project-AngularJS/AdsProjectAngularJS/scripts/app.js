@@ -17,5 +17,8 @@ var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource', 'u
         }).when('/myads', {
             templateUrl: 'templates/my-ads.html',
             controller: 'MyAdsController'
+        }).when('/edit/:param', {
+            templateUrl: 'templates/myad-edit.html',
+            controller: 'EditAdController'
         }).otherwise({redirectTo: '/'});
     });

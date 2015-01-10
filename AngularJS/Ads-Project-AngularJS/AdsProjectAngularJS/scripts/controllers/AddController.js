@@ -7,7 +7,6 @@ adApplication.controller('AddController', function ($scope, $location, $log, add
         var ad = {
             title: $scope.title,
             text: $scope.text,
-            //TODO image: $scope.image,
             imageDataUrl: $scope.imageDataUrl,
             categoryId: $scope.catData.getSelectedCatId(),
             townId: $scope.townData.getSelectedTownId()

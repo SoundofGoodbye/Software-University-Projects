@@ -1,4 +1,4 @@
-adApplication.controller('HeaderController', function ($scope, $window, $rootScope, headerService, userService) {
+adApplication.controller('HeaderController', function ($scope, $window, $rootScope, $location, headerService, userService) {
     $scope.headerData = headerService;
 
     $scope.username = $window.sessionStorage.username;
@@ -17,6 +17,9 @@ adApplication.controller('HeaderController', function ($scope, $window, $rootSco
                     layout: 'top',
                     timeout: 5000
                 });
+
+                // Redirect to home page.
+                $location.path('/');
             },
             function (error) {
 

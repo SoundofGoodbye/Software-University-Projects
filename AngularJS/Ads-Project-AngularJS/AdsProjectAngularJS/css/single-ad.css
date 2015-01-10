@@ -15,3 +15,13 @@
 .ad-container-style {
     background-color: #A9D18E;
 }
+
+.status-container {
+    background-color: #C5E0B4;
+    border: 1px dashed #649B3F;
+    text-align: center;
+}
+
+.custom-border {
+    border-right: 2px solid #507E32;
+}
