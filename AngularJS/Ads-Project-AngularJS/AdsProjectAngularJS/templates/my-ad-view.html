@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="row"  data-ng-if="singleAd.status !== 'Inactive'">
+        <div class="row" data-ng-if="singleAd.status !== 'Inactive'">
             <div class="col-sm-12">
                 <button class="btn btn-lg btn-success col-sm-12">Deactive</button>
             </div>
@@ -57,7 +57,9 @@
                 <button class="btn btn-lg btn-info col-sm-12" data-ng-click="editAd(singleAd.id)">Edit</button>
             </div>
             <div class="col-sm-12">
-                <button class="btn btn-lg btn-success col-sm-12">Publish Again</button>
+                <button class="btn btn-lg btn-success col-sm-12" data-ng-click="callPublishAgainService(singleAd.id)">
+                    Publish Again
+                </button>
             </div>
             <div class="col-sm-12">
                 <button class="btn btn-lg btn-danger col-sm-12" data-ng-click="deleteAd(singleAd.id)">Delete</button>

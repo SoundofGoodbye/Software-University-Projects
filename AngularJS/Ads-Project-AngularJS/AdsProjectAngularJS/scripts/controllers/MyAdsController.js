@@ -1,5 +1,4 @@
 adApplication.controller('MyAdsController', function ($scope, $location, $log, myAdsHelperService) {
-
     $scope.numPerPage = 2;
     $scope.currentPage = 1;
     $scope.data = myAdsHelperService;
@@ -36,6 +35,27 @@ adApplication.controller('MyAdsController', function ($scope, $location, $log, m
 
     $scope.editAd = function (selectedAdId) {
         $location.path('/user/ads/edit/' + selectedAdId);
+    };
+
+    $scope.callPublishAgainService = function (adId) {
+        myAdsHelperService.publishAgain(adId)
+            .$promise
+            .then(function (data) {
+                noty({
+                    text: 'Ad published successfully.',
+                    type: 'success',
+                    layout: 'top',
+                    timeout: 5000
+                });
+            },
+            function (error) {
+                noty({
+                    text: 'Error while publishing ad.',
+                    type: 'success',
+                    layout: 'top',
+                    timeout: 5000
+                });
+            });
     };
 
     $scope.adImage = "ad-image-style";
