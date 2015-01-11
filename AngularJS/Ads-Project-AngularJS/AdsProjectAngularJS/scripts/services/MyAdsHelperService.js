@@ -29,7 +29,7 @@ adApplication.factory('myAdsHelperService', function ($resource, $http, $window,
         { update: {
             method: 'PUT'
         }
-        });
+    });
 
     function getAdById(adId) {
         return singleAdResource.get({

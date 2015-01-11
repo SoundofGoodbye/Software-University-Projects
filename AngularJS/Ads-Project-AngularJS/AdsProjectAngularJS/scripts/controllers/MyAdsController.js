@@ -1,4 +1,4 @@
-adApplication.controller('MyAdsController', function ($scope, $location, myAdsHelperService) {
+adApplication.controller('MyAdsController', function ($scope, $location, $log, myAdsHelperService) {
 
     $scope.numPerPage = 2;
     $scope.currentPage = 1;
@@ -13,8 +13,12 @@ adApplication.controller('MyAdsController', function ($scope, $location, myAdsHe
             myAdsHelperService.totalItems = data.numItems;
             myAdsHelperService.numPages = data.numPages;
         }, function (error) {
-
+            $log.error(error);
         });
+
+    $scope.deleteAd = function (selectedAdId) {
+        $location.path("/user/ads/delete/" + selectedAdId);
+    };
 
     $scope.pageChanged = function () {
         myAdsHelperService.pageNum = $scope.currentPage;
@@ -31,7 +35,7 @@ adApplication.controller('MyAdsController', function ($scope, $location, myAdsHe
     };
 
     $scope.editAd = function (selectedAdId) {
-        $location.path('/edit/' + selectedAdId);
+        $location.path('/user/ads/edit/' + selectedAdId);
     };
 
     $scope.adImage = "ad-image-style";

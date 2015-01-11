@@ -17,8 +17,11 @@ var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource', 'u
         }).when('/myads', {
             templateUrl: 'templates/my-ads.html',
             controller: 'MyAdsController'
-        }).when('/edit/:param', {
+        }).when('/user/ads/edit/:param', {
             templateUrl: 'templates/myad-edit.html',
             controller: 'EditAdController'
+        }).when('/user/ads/delete/:param', {
+            templateUrl: 'templates/delete-confirm-box.html',
+            controller: 'DeleteAdController'
         }).otherwise({redirectTo: '/'});
     });

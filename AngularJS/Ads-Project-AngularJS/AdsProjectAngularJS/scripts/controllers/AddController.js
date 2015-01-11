@@ -21,7 +21,6 @@ adApplication.controller('AddController', function ($scope, $location, $log, add
                     layout: 'top',
                     timeout: 5000
                 });
-                //TODO: Redirect to ad - view
                 $location.path('/');
             },
             function (error) {
@@ -31,12 +30,11 @@ adApplication.controller('AddController', function ($scope, $location, $log, add
                     type: 'error',
                     layout: 'top',
                     timeout: 5000
-                })
+                });
             });
     };
 
     $scope.fileSelected = function(fileInputField) {
-        //delete $scope.adData.imageDataUrl;
         var file = fileInputField.files[0];
         if (file.type.match(/image\/.*/)) {
             var reader = new FileReader();
@@ -51,7 +49,7 @@ adApplication.controller('AddController', function ($scope, $location, $log, add
     };
 
     // Add css
-    $scope.newAdStyle = 'create-new-ad-style';
+    $scope.adImageStyle = 'ad-image-style';
     /**
      * Change the header title.
      */

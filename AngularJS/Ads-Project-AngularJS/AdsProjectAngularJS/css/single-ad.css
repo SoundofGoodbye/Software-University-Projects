@@ -3,7 +3,8 @@
 }
 
 .ad-image-style {
-    max-width: 120px;
+    min-height: 140px;
+    max-width: 140px;
     background-color: #C5E0B4;
     border: 1px dashed #649B3F;
 }
