@@ -1,14 +1,59 @@
-<div class="jumbotron content-background title-style col-sm-12" data-ng-class="newAdStyle">
+<div class="jumbotron wrapper-background title-style col-sm-12" data-ng-class="newAdStyle">
     <h2>Delete Confirm Ad?</h2>
     <hr/>
     <div class="row">
         <div class="col-sm-12">
-            <span class="col-sm-6">
+            <span class="col-sm-6 bold-title">
                 {{data.ads.title}}
             </span>
             <span class="col-sm-6">
                 {{data.ads.date | date: "dd-MMM-yyyy"}}
             </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4" data-ng-class="adImageStyle">
+            <div data-ng-if="data.ads.imageDataUrl !== null">
+                <img src="" data-ng-src="{{data.ads.imageDataUrl}}"/>
+            </div>
+            <div data-ng-if="data.ads.imageDataUrl === null">
+                <img src="images/no-image.png"/>
+            </div>
+        </div>
+        <div class="col-sm-8 content-background">
+            <span>
+                {{data.ads.text}}
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 pull-right">
+            <div class="col-sm-4">
+                <label for="category-name">Category:</label>
+            </div>
+            <div class="col-sm-4">
+                <div class="content-background" id="category-name">{{data.ads.categoryName}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 pull-right">
+            <div class="col-sm-4">
+                <label for="town-name">Town:</label>
+            </div>
+            <div class="col-sm-4">
+                <div class="content-background" id="town-name">{{data.ads.townName}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-lg btn-success col-sm-12" data-ng-click="callDeleteService()">Delete</button>
+        </div>
+        <div class="col-sm-6">
+            <a href="#/">
+                <button class="btn btn-lg btn-success col-sm-12">Cancel</button>
+            </a>
         </div>
     </div>
 </div>

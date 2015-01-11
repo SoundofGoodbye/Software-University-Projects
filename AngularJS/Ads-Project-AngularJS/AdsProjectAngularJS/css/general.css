@@ -12,10 +12,20 @@ body {
 .jumbotron.small-padding {
     padding: 20px;
 }
-.jumbotron.content-background {
+.jumbotron.wrapper-background {
     background-color: #A9D18E;
+    border: 1px solid #649B3F;
+}
+
+.content-background {
+    background-color: #C5E0B4;
+    border: 1px dashed #649B3F;
 }
 
 .jumbotron.title-style {
     text-align: center;
+}
+
+.bold-title {
+    font-weight: bold;
 }

@@ -26,10 +26,11 @@ adApplication.factory('myAdsHelperService', function ($resource, $http, $window,
     var editAdResource = $resource(
         'http://softuni-ads.azurewebsites.net/api/user/ads/:id',
         {id: '@id'},
-        { update: {
-            method: 'PUT'
-        }
-    });
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
 
     function getAdById(adId) {
         return singleAdResource.get({
@@ -40,6 +41,11 @@ adApplication.factory('myAdsHelperService', function ($resource, $http, $window,
     function editAd(ad) {
         return editAdResource.update({id: ad.id}, ad);
     }
+
+    function deleteAd(id) {
+        return editAdResource.delete({id: id});
+    }
+
 
     function getAds() {
         var pageNum = this.pageNum;
@@ -55,6 +61,7 @@ adApplication.factory('myAdsHelperService', function ($resource, $http, $window,
     return {
         getAds: getAds,
         getAdById: getAdById,
-        editAd: editAd
+        editAd: editAd,
+        deleteAd: deleteAd
     };
 });
