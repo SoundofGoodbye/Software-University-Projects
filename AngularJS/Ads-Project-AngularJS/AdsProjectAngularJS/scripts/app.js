@@ -14,7 +14,7 @@ var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource', 'u
         }).when('/add', {
             templateUrl: 'templates/add.html',
             controller: 'AddController'
-        }).when('/myads', {
+        }).when('/user/ads', {
             templateUrl: 'templates/my-ads.html',
             controller: 'MyAdsController'
         }).when('/user/ads/edit/:param', {

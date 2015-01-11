@@ -1,8 +1,4 @@
 adApplication.controller('HomeController', function ($scope, $log, headerService, helperService) {
-    /**
-     * Default setting to 10 items total.
-     * @type {number}
-     */
     $scope.currentPage = 1;
     $scope.numPerPage = 2;
     $scope.maxVisiblePages = 5;

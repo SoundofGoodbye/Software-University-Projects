@@ -1,4 +1,5 @@
 adApplication.controller('MyAdsController', function ($scope, $location, $log, myAdsHelperService) {
+    // Extract to constants.
     $scope.numPerPage = 2;
     $scope.currentPage = 1;
     $scope.data = myAdsHelperService;

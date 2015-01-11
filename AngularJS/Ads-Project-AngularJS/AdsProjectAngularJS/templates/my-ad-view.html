@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-9 custom-border">
         <div class="row">
-            <span class="col-sm-5">{{singleAd.title}}</span>
+            <span class="col-sm-5 bold-title">{{singleAd.title}}</span>
             <span class="col-sm-5 pull-right">{{singleAd.date | date: "dd-MMM-yyyy"}}</span>
         </div>
         <div class="row">
@@ -17,19 +17,29 @@
             </div>
             <div class="col-sm-9" data-ng-class="adContent">
                 <div class="row">
-                    <span>{{singleAd.text}}</span>
+                    <div class="col-sm-12 content-background">
+                        <span>{{singleAd.text}}</span>
+                    </div>
                 </div>
-                <div class="row">
-                    <label>Name</label>
-                    <span>{{singleAd.ownerName}}</span>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 pull-right">
+                    <div class="col-sm-4">
+                        <label for="category-name">Category:</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="content-background" id="category-name">{{singleAd.categoryName}}</div>
+                    </div>
                 </div>
-                <div class="row">
-                    <label>Email</label>
-                    <span>{{singleAd.ownerEmail}}</span>
-                </div>
-                <div class="row">
-                    <label>Tel.</label>
-                    <span>{{singleAd.ownerPhone}}</span>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 pull-right">
+                    <div class="col-sm-4">
+                        <label for="town-name">Town:</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="content-background" id="town-name">{{singleAd.townName}}</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,7 +59,8 @@
         </div>
         <div class="row" data-ng-if="singleAd.status !== 'Inactive'">
             <div class="col-sm-12">
-                <button class="btn btn-lg btn-success col-sm-12" data-ng-click="deactivateAd(singleAd.id)">Deactive</button>
+                <button class="btn btn-lg btn-success col-sm-12" data-ng-click="deactivateAd(singleAd.id)">Deactive
+                </button>
             </div>
         </div>
         <div class="row" data-ng-if="singleAd.status === 'Inactive'">
