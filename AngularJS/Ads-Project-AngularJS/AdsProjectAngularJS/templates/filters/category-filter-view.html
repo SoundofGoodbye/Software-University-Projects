@@ -1,11 +1,14 @@
 <h2>Categories</h2>
 <hr/>
 
-<ul>
-    <li>
-        <button data-ng-click="filterCategory()">All</button>
+<ul class="sidebar-menu">
+    <li class="special"
+        ng-class="{'selected' : selectedCategory == null}"
+        data-ng-click="filterCategory()">
+        All
     </li>
-    <li data-ng-repeat="currentCategory in data.categories">
-        <button data-ng-click="filterCategory(currentCategory.id)">{{currentCategory.name}}</button>
+    <li data-ng-repeat="currentCategory in data.categories" data-ng-click="filterCategory(currentCategory.id)"
+        data-ng-class="{'selected' : selectedCategory == currentCategory.id}">
+        {{currentCategory.name}}
     </li>
 </ul>

@@ -1,13 +1,13 @@
 adApplication.controller('FiltersController', function ($scope, $log, filterService, helperService) {
-
     $scope.filterCategory = function (categoryId) {
         helperService.categoryId = categoryId;
-
+        $scope.selectedCategory = categoryId;
         filterData();
     };
 
     $scope.filterTown = function (townId) {
         helperService.townId = townId;
+        $scope.selectedTown = townId;
 
         filterData();
     };

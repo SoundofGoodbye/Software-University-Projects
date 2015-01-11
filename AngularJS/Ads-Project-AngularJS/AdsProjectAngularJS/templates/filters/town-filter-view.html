@@ -1,11 +1,14 @@
 <h2>Towns</h2>
 <hr/>
 
-<ul>
-    <li>
-        <button data-ng-click="filterTown()">All</button>
+<ul class="sidebar-menu">
+    <li class="special"
+        ng-class="{'selected' : selectedTown == null}"
+        data-ng-click="filterTown()">
+        All
     </li>
-    <li data-ng-repeat="currentTown in data.towns">
-        <button data-ng-click="filterTown(currentTown.id)">{{currentTown.name}}</button>
+    <li data-ng-repeat="currentTown in data.towns" data-ng-click="filterTown(currentTown.id)"
+        data-ng-class="{'selected' : selectedTown == currentTown.id}">
+        {{currentTown.name}}
     </li>
 </ul>

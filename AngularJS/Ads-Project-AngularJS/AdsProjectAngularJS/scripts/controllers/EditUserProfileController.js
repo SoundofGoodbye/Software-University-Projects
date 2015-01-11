@@ -38,7 +38,6 @@ adApplication.controller('EditUserProfileController', function ($scope, headerSe
     };
 
     $scope.callChangePasswordService = function () {
-
         if ($scope.newPassword !== $scope.confirmPassword) {
             noty({
                 text: 'Passwords must match',
@@ -50,16 +49,21 @@ adApplication.controller('EditUserProfileController', function ($scope, headerSe
             return;
         }
 
-        var pass = {
+        var usersPass = {
             oldPassword: $scope.oldPassword,
             newPassword: $scope.newPassword,
             confirmPassword: $scope.confirmPassword
         };
 
-        userService.changePassword(pass)
+        userService.changePassword(usersPass)
             .$promise
             .then(function (data) {
-                console.log(data);
+                noty({
+                    text: 'Password changed successfully.',
+                    type: 'success',
+                    layout: 'top',
+                    timeout: 5000
+                });
             },
             function (error) {
                 noty({

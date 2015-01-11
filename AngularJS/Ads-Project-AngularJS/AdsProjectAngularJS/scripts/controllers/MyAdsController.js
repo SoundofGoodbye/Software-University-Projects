@@ -38,7 +38,7 @@ adApplication.controller('MyAdsController', function ($scope, $location, $log, m
     };
 
     $scope.deactivateAd = function (selectedAdId) {
-        myAdsHelperService.deactivateAd()
+        myAdsHelperService.deactivateAd(selectedAdId)
             .$promise
             .then(function (data) {
                 noty({

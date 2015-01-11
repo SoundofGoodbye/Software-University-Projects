@@ -1,3 +1,5 @@
-<h2>{{headerData.getHeader()}}</h2>
-<span>{{username}}</span>
-<span data-ng-if="isUserLogged"><a href="" data-ng-click="callLogout()">Logout</a></span>
+<span>{{headerData.getHeader()}}</span>
+<div data-ng-if="isUserLogged" class="user-area">
+    <span>{{username}}</span>
+    <a href="" data-ng-click="callLogout()" class="link">Logout</a>
+</div>

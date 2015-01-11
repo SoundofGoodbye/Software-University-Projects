@@ -5,9 +5,6 @@ adApplication.controller('CategoryFilterController', function ($scope, $log, cat
     {
         //This function is sort of private constructor for controller
         $scope.selected_cat_id = selected_cat_id;
-        //Based on passed argument you can make a call to resource
-        //and initialize more objects
-        //$resource.getMeBond(007)
     };
 
     categoryFilterService.getAllCategories()
