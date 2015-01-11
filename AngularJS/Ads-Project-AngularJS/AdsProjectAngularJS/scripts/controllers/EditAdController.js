@@ -12,7 +12,7 @@ adApplication.controller('EditAdController', function ($scope, $routeParams, $lo
             myAdsHelperService.ads = data;
         },
         function (error) {
-            //TODO: Error
+            $log.error(error);
         });
 
     $scope.deleteImage = function () {

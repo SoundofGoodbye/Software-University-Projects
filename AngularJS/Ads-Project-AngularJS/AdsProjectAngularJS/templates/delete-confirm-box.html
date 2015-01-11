@@ -1,67 +1,14 @@
-<div class="row">
-    <div class="col-sm-9 custom-border">
-        <div class="row">
-            <span class="col-sm-5">{{singleAd.title}}</span>
-            <span class="col-sm-5 pull-right">{{singleAd.date}}</span>
-        </div>
-        <div class="row">
-            <div class="col-sm-3">
-                <div data-ng-class="adImage">
-                    <div data-ng-if="singleAd.imageDataUrl !== null">!
-                        <img src="" data-ng-src="{{singleAd.imageDataUrl}}"/>
-                    </div>
-                    <div data-ng-if="singleAd.imageDataUrl === null">
-                        <img src="images/no-image.png"/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-9" data-ng-class="adContent">
-                <div class="row">
-                    <span>{{singleAd.text}}</span>
-                </div>
-                <div class="row">
-                    <label>Name</label>
-                    <span>{{singleAd.ownerName}}</span>
-                </div>
-                <div class="row">
-                    <label>Email</label>
-                    <span>{{singleAd.ownerEmail}}</span>
-                </div>
-                <div class="row">
-                    <label>Tel.</label>
-                    <span>{{singleAd.ownerPhone}}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="row">
-            <div class="col-sm-12">
-                <span>Status:</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div data-ng-class="statusContainer">
-                    <span>{{singleAd.status}}</span>
-                </div>
-            </div>
-        </div>
-        <div class="row"  data-ng-if="singleAd.status !== 'Inactive'">
-            <div class="col-sm-12">
-                <button class="btn btn-lg btn-success col-sm-12">Deactive</button>
-            </div>
-        </div>
-        <div class="row" data-ng-if="singleAd.status === 'Inactive'">
-            <div class="col-sm-12">
-                <button class="btn btn-lg btn-info col-sm-12" data-ng-click="editAd(singleAd.id)">Edit</button>
-            </div>
-            <div class="col-sm-12">
-                <button class="btn btn-lg btn-success col-sm-12">Publish Again</button>
-            </div>
-            <div class="col-sm-12">
-                <button class="btn btn-lg btn-danger col-sm-12">Delete</button>
-            </div>
+<div class="jumbotron content-background title-style col-sm-12" data-ng-class="newAdStyle">
+    <h2>Delete Confirm Ad?</h2>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="col-sm-6">
+                {{data.ads.title}}
+            </span>
+            <span class="col-sm-6">
+                {{data.ads.date | date: "dd-MMM-yyyy"}}
+            </span>
         </div>
     </div>
 </div>

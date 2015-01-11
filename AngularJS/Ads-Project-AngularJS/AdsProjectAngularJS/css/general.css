@@ -12,3 +12,10 @@ body {
 .jumbotron.small-padding {
     padding: 20px;
 }
+.jumbotron.content-background {
+    background-color: #A9D18E;
+}
+
+.jumbotron.title-style {
+    text-align: center;
+}
