@@ -41,6 +41,16 @@ adApplication.factory('myAdsHelperService', function ($resource, $http, $window,
             }
         });
 
+    var deactivateAdResource = $resource(
+        'http://softuni-ads.azurewebsites.net/api/user/ads/deactivate/:id',
+        {id: '@id'},
+        {
+            update: {
+                method: 'PUT'
+            }
+        }
+    );
+
     function publishAgain(adId) {
         return publishAgainResource.update({id: adId});
     }
@@ -57,6 +67,10 @@ adApplication.factory('myAdsHelperService', function ($resource, $http, $window,
 
     function deleteAd(id) {
         return editAdResource.delete({id: id});
+    }
+
+    function deactivateAd(id) {
+        return deactivateAdResource.update({id: id});
     }
 
 
@@ -76,6 +90,7 @@ adApplication.factory('myAdsHelperService', function ($resource, $http, $window,
         getAdById: getAdById,
         editAd: editAd,
         deleteAd: deleteAd,
-        publishAgain: publishAgain
+        publishAgain: publishAgain,
+        deactivateAd: deactivateAd
     };
 });

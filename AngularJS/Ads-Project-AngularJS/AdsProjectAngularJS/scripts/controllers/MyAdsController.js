@@ -37,6 +37,26 @@ adApplication.controller('MyAdsController', function ($scope, $location, $log, m
         $location.path('/user/ads/edit/' + selectedAdId);
     };
 
+    $scope.deactivateAd = function (selectedAdId) {
+        myAdsHelperService.deactivateAd()
+            .$promise
+            .then(function (data) {
+                noty({
+                    text: 'Ad deactivated successfully.',
+                    type: 'success',
+                    layout: 'top',
+                    timeout: 5000
+                });
+            }, function (error) {
+                noty({
+                    text: 'Problem while deactivating ad.',
+                    type: 'error',
+                    layout: 'top',
+                    timeout: 5000
+                });
+            });
+    };
+
     $scope.callPublishAgainService = function (adId) {
         myAdsHelperService.publishAgain(adId)
             .$promise
