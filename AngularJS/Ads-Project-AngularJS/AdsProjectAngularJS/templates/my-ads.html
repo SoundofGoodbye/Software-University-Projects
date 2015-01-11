@@ -1,6 +1,6 @@
 <!-- Wrapper for the ads listing -->
 <div class="col-sm-12" data-ng-controller="MyAdsController">
-    <div class="col-sm-12 jumbotron small-padding" data-ng-repeat="singleAd in data.ads"
+    <div class="col-sm-12 jumbotron wrapper-background small-padding" data-ng-repeat="singleAd in data.ads"
          data-ng-include="'templates/my-ad-view.html'" data-ng-class="adContainerStyle">
     </div>
     <pagination total-items="data.totalItems" items-per-page="numPerPage" data-ng-model="currentPage"
