@@ -1,0 +1,94 @@
+<div class="col-sm-12" data-ng-controller="EditUserProfileController">
+    <div class="jumbotron wrapper-background title-style col-sm-5">
+        <form data-ng-submit="callUpdateProfileService()">
+            <h2>Edit Profile</h2>
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="editName" class="pull-left">Name:</label>
+                    <input type="text" class="form-control" id="editName" placeholder="Enter username"
+                           required="required" data-ng-model="name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="editEmail" class="pull-left">Email:</label>
+                    <input type="email" class="form-control" id="editEmail" placeholder="Enter Email"
+                           required="required" data-ng-model="email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="editPhone" class="pull-left">Phone:</label>
+                    <input type="text" class="form-control" id="editPhone" placeholder="Enter Phone"
+                           required="required" data-ng-model="phone">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="add-town">Town</label>
+                    <select data-ng-controller="TownFilterController" class="form-control" id="add-town"
+                            data-ng-model="data.selectedTownId">
+                        <option data-ng-repeat="town in data.towns" value="{{town.id}}">{{town.name}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="submit" value="Update" class="btn btn-lg btn-success col-sm-12"/>
+                </div>
+                <div class="col-sm-6">
+                    <a href="#/">
+                        <button class="btn btn-lg btn-success col-sm-12">Cancel</button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="jumbotron wrapper-background title-style col-sm-6 small-padding pull-right">
+        <form data-ng-submit="callChangePasswordService()">
+            <h2>Change Password</h2>
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="old-pass" class="pull-left">Old password:</label>
+                    <input type="password" class="form-control" id="old-pass" placeholder="Enter password"
+                           required="required" data-ng-model="oldPassword">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="new-pass" class="pull-left">New password:</label>
+                    <input type="password" class="form-control" id="new-pass" placeholder="Enter password"
+                           required="required" data-ng-model="newPassword">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="confirm-pass" class="pull-left">Confirm new password:</label>
+                    <input type="password" class="form-control" id="confirm-pass" placeholder="Confirm password"
+                           required="required" data-ng-model="confirmPassword">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <input type="submit" value="Change Password" class="btn btn-lg btn-success col-sm-12"/>
+                </div>
+                <div class="col-sm-5">
+                    <a href="#/">
+                        <button class="btn btn-lg btn-success col-sm-12">Cancel</button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

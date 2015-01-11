@@ -1,4 +1,11 @@
 .footer-style {
     background-color: #A9D18E;
     text-align: center;
+    border: 1px solid #649B3F;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    width: 100%;
+    bottom: 0;
+    position: fixed;
 }

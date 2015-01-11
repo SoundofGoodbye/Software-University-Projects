@@ -23,5 +23,8 @@ var adApplication = angular.module('adsProjectApp', ['ngRoute', 'ngResource', 'u
         }).when('/user/ads/delete/:param', {
             templateUrl: 'templates/delete-confirm-box.html',
             controller: 'DeleteAdController'
+        }).when('/user/profile', {
+            templateUrl: 'templates/edit-user-profile.html',
+            controller: 'EditUserProfileController'
         }).otherwise({redirectTo: '/'});
     });
